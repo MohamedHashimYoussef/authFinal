@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static '/assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="{% static '/assets/fonts/simple-line-icons.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{% static '/assets/css/smoothproducts.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" data-bs-hover-animate="pulse">
+        <div class="container"><a class="navbar-brand logo" href="#" style="color: rgba(14,90,204,0.9);"><strong><em>Author Identification</em></strong><br></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#aboutus">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#predict">Predict</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <main class="page landing-page">
+        <section class="clean-block clean-hero" style="background-image:url({% static 'assets/img/tech/image4.jpg' %});color:rgba(9, 162, 255, 0.85);">
+            <div class="text">
+                <h2><strong><em>Author Identification</em></strong></h2>
+                <p>This is a system helps you to predict the author of an article throw applying Machine Learning Techniques and NLP&nbsp;</p><a class="btn btn-outline-light btn-lg"  href="#textit"><strong><em>Identify</em></strong></a></div>
+        </section>
+        <form class="clean-block clean-info dark" id="predict">
+            {% csrf_token %}
+            <div class="container" id="textit">
+                <div class="block-heading"><h2 class="text-info"><strong><em>Enter Your Text </em>&#x1F9D0; </strong></h2><div class="row align-items-center">
+             <div class="col-md-12"><textarea id="t1" name="t1" class="col-md-12 form-control" style="height:400px; resize:none;"></textarea>
+            </div>
+            </div><button class="btn btn-primary border rounded shadow-lg" id="s1" name="s1" data-bs-hover-animate="pulse" type="submit" style="width: 200px;height: 50px;margin: 20px;background-color: rgb(6,123,248);font-size: 25px;"><strong><em>Predict</em></strong></button></div>
+            </div>
+            <div id="res" class="col-md-4 offset-4" style="text-align: center;"></div>
+        </form>
+
+        <section class="clean-block features">
+            <div class="container" id="features">
+                <div class="block-heading">
+                    <h2 class="text-info"><strong><em>Features</em></strong></h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 feature-box"><i class="icon-star icon"></i>
+                        <h4>Predicting</h4>
+                        <p>Application is used to predict author of an article.</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="icon-pencil icon"></i>
+                        <h4>Customizable</h4>
+                        <p>Application always make updates and able to customize.</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="icon-screen-smartphone icon"></i>
+                        <h4>Responsive</h4>
+                        <p>Application is responsive to all devices.</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="icon-refresh icon"></i>
+                        <h4>All Browser Compatibility</h4>
+                        <p>This application is compatible to all browsers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clean-block slider dark"></section>
+        <section class="clean-block about-us">
+            <div class="container" id="aboutus">
+                <div class="block-heading">
+                    <h2 class="text-info"><strong><em>About Us</em></strong></h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="{% static 'assets/img/avatars/sara.jpg' %}">
+                            <div class="card-body info">
+                                <h4 class="card-title">Sara Abdelfathah</h4>
+                                <p class="card-text">Backend developer responsible for creating API and logic in backend</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="{% static 'assets/img/avatars/rana.jpg' %}">
+                            <div class="card-body info">
+                                <h4 class="card-title">Rana Adel</h4>
+                                <p class="card-text">Researcher responsible for building the Model responsible for signing the identity of the author
+ </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="{% static 'assets/img/avatars/ola.jpg' %}">
+                            <div class="card-body info">
+                                <h4 class="card-title">Ola Adel</h4>
+                                <p class="card-text">Backend developer responsible for creating API and logic in backend</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-sm-6 col-lg-4" >
+                        <div style="margin-top: 10px;" class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="{% static 'assets/img/avatars/fady.jpg' %}">
+                            <div class="card-body info">
+                                <h4 class="card-title">Fady Gamal</h4>
+                                <p class="card-text">Front End developer responsible for call API in front end and develop it</p></div>
+                        </div>
+                    </div>
+                     <div class="col-sm-6 col-lg-4">
+                        <div style="margin-top: 10px;" class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="{% static 'assets/img/avatars/saad.jpg' %}">
+                            <div class="card-body info">
+                                <h4 class="card-title">Saad GamalAbdelnaser</h4>
+                                <p class="card-text">Front End developer who designed the website </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container" style="color:white;">
+            Authorship identification is a task of identifying authors of anonymous texts given examples of the writing of authors. The increasingly large volumes of anonymous texts on the Internet enhance the great yet urgent necessity for authorship identification. Text mining is one of the main and typical tasks of machine learning (ML). Authorship identification (AI) is a standard research subject in text mining and natural language processing (NLP) that has undergone a remarkable evolution these last years. We need to identify/determine the actual author of anonymous texts given on the basis of a set of writing samples. Standard text classification often focuses on many handcrafted features such as dictionaries, knowledge bases, and different stylometric characteristics, which often leads to remarkable dimensionality. Unlike traditional approaches, Textual features are the important elements for Authorship Identification .It is therefore important to analyze them and identify the most promising features.
+        </div>
+        <div class="footer-copyright">
+            <p>© 2018 Copyright Text</p>
+        </div>
+    </footer>
+    <script src="{% static '/assets/js/jquery.min.js' %}"></script>
+    <script src="{% static '/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/assets/js/bs-init.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="{% static '/assets/js/smoothproducts.min.js' %}"></script>
+    <script src="{% static '/assets/js/theme.js' %}"></script>
+<script>
+        $(document).ready(function() {
+            $("#s1").click(function (e) {
+                e.preventDefault()
+                var fd = new FormData();
+                var text = $('#t1').val();
+                fd.append('text', text);
+                $.ajax({
+                    url: 'predict/',
+                    type: 'POST',
+                    data: fd,
+                    contentType: false,
+                    processData: false,
+                    success: function (response ) {
+                        if(response == 'EAP') {
+                            $("#res").html("<div class=\"col-lg-12 alert alert-success\" >EAP</div>");
+                        }else if(response == 'HPL'){
+                            $("#res").html("<div class=\"col-lg-12 alert alert-success\" >HPL</div>");
+                        }else{
+                            $("#res").html("<div class=\"col-lg-12 alert alert-success\" >MWS</div>");
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
